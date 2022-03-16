@@ -1,0 +1,9 @@
+body,
+html {
+  margin: 0;
+}
+
+#content {
+  margin-left: 15px;
+  padding-top: 1em;
+}

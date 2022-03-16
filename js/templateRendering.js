@@ -1,5 +1,5 @@
 import { renderTemplate, setActive, showPage } from "./Utility.js"
-
+import { fetchPersons } from "./Fetch.js";
 
 function renderMenuItems(evt) {
   const element = evt.target
@@ -14,6 +14,12 @@ function renderMenuItems(evt) {
     }
     case "seeShit": {
       console.log("See Krakkerz shit here!")
+      break
+    }
+    case "myDetails" : {
+      fetchPersons()
+      console.log("myDetails")
+      break
     }
 
   }
