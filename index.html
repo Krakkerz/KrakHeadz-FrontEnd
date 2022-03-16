@@ -12,27 +12,23 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
 
-  <!-- Place favicon.ico in the root directory -->
-
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/menu.css">
   <script type="module" src="js/templateRendering.js"></script>
 
-
-  <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 
-<div style="margin-left: 50px;margin-right: auto;width: 80%;" class="vertical-menu">
+<div class="nav">
   <div>
     <ul id="menu" class="menu">
       <li><a id="about" href="#">About</a></li>
       <li><a id="seeShit" href="#">See address shit!</a></li>
+      <li><a id="myDetails" href="#">My details!!</a></li>
     </ul>
   </div>
-  <div id="content" style="margin-left:15px;padding-top: 1em;"></div>
+  <div id="content"></div>
 </div>
 
 </body>
@@ -48,4 +44,21 @@
 <template data-id="seeShit">
   <h2>See some shit here</h2>
   <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores enim ipsam mollitia omnis reiciendis reprehenderit, suscipit veniam. Alias cupiditate deleniti et quaerat quibusdam quidem similique sint? Cumque, itaque, ratione.</span><span>Ad dolores impedit in odit, omnis quam quos saepe! Accusantium alias, asperiores corporis cupiditate deserunt dolorem eius molestias nisi nulla, numquam quas recusandae sequi sit ut veniam vitae voluptate voluptatem?</span><span>Ad aliquam amet animi architecto autem distinctio dolore doloribus earum ex facere fugiat illum ipsam iusto laudantium minus necessitatibus numquam quam quas quia rem saepe, totam ut voluptates! Cupiditate, nesciunt?</span><span>Accusamus commodi corporis dignissimos earum, est et eum fugiat iste, laudantium, libero maxime modi quisquam reiciendis repellat veniam? Accusamus commodi cumque facilis iure obcaecati officia quae saepe sapiente sequi voluptatum.</span><span>Accusamus assumenda, consequuntur est ex fugit itaque laborum modi mollitia natus, nesciunt nobis nostrum omnis pariatur sit totam. A beatae dolor doloribus ea incidunt ipsa labore magni maiores nisi tempore!</span></p>
+</template>
+
+<template data-id="myDetails">
+  <div>
+    <table class="personsTable">
+      <thead>
+        <tr>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Phone number</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+
+  </div>
 </template>
