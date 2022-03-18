@@ -2,6 +2,7 @@
 <html class="no-js" lang="en">
 
 <head>
+
   <meta charset="utf-8">
   <title>| KrakHeadz |</title>
   <meta name="description" content="">
@@ -14,8 +15,8 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/style.css">
   <script type="module" src="js/templateRendering.js"></script>
-
 </head>
 
 <body>
@@ -26,6 +27,7 @@
       <li><a id="about" href="#">About</a></li>
       <li><a id="seeShit" href="#">See address shit!</a></li>
       <li><a id="myDetails" href="#">My details!!</a></li>
+      <li><a id="addUser" href="#">Add user!</a></li>
     </ul>
   </div>
   <div id="content"></div>
@@ -53,12 +55,43 @@
         <tr>
           <th>First name</th>
           <th>Last name</th>
+          <th>Address</th>
           <th>Phone number</th>
           <th>Email</th>
         </tr>
       </thead>
       <tbody id="rows"></tbody>
     </table>
-
   </div>
+</template>
+
+<template data-id="addUser">
+  <h2>Add a user!</h2>
+
+  <form>
+    <label for="firstName">First name</label>
+    <input id="firstName" type="text">
+    <hr>
+
+    <label for="lastName">Last name</label>
+    <input id="lastName" type="text">
+    <hr>
+
+    <label for="address">Address</label>
+    <input type="text" id="address">
+
+    <pre id="addressContent"></pre>
+    <hr>
+
+    <label for="phoneNumber">Phone number</label>
+    <input id="phoneNumber" type="text">
+    <hr>
+
+    <label for="email">Email</label>
+    <input id="email" type="email">
+    <hr>
+
+    <button id="submitUser" type="submit">Submit user</button>
+    <p id="userInformation"></p>
+  </form>
 </template>
