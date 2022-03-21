@@ -31,7 +31,7 @@ export function getHobbies(){
 
       for (let i = 0; i < hobbyData.length; i++) {
         let newOption = document.createElement("option")
-        newOption.innerText = JSON.stringify(hobbyData[i].name)
+        newOption.innerText = JSON.stringify(hobbyData[i].name).replace(/"/g, "")
         selectHobby.appendChild(newOption)
 
 
