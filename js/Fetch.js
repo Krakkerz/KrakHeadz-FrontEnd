@@ -1,8 +1,9 @@
-import { personsApi, dawaApi } from './Urls.js'
+import { personsApi, dawaApi, hobbyApi } from './Urls.js'
 
 //document.getElementById("btn").onclick = fetchPersons
 
 let personsArray = []
+let hobbyArray = []
 
 export function fetchPersons(){
   if (personsArray.length > 0) {
@@ -18,6 +19,31 @@ export function fetchPersons(){
     .catch(error => console.error(error))
 
 }
+
+export function getHobbies(){
+  if (hobbyArray.length > 0 ) {
+    return
+  }
+  fetch(hobbyApi)
+    .then(res => res.json())
+    .then(hobbyData => {
+      const selectHobby = document.getElementById("selectHobby")
+
+      for (let i = 0; i < hobbyData.length; i++) {
+        let newOption = document.createElement("option")
+        newOption.innerText = JSON.stringify(hobbyData[i].name)
+        selectHobby.appendChild(newOption)
+
+
+      }
+
+        document.getElementById("hobbyList").innerText = JSON.stringify(hobbyData,null,2)
+      })
+
+    .catch(error => console.error(error))
+
+}
+
 
 export function fetchDAWA(){
   const userInput = document.getElementById("address").value

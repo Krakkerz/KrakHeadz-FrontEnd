@@ -1,5 +1,5 @@
 import { renderTemplate, setActive, showPage } from "./Utility.js"
-import { fetchPersons, fetchDAWA } from "./Fetch.js";
+import {fetchPersons, fetchDAWA, getHobbies} from "./Fetch.js";
 import { addUserHandler } from "./addUser.js";
 
 function renderMenuItems(evt) {
@@ -23,6 +23,7 @@ function renderMenuItems(evt) {
       break
     }
     case "addUser" : {
+      getHobbies()
       addUserHandler()
       document.getElementById("address").oninput = fetchDAWA
 
