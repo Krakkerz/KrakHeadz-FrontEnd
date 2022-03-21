@@ -1,4 +1,16 @@
+
 tr:nth-child(2n + 2){
   background: #666666;
   opacity: 0.9;
+}
+
+b {
+  color: red;
+}
+.btn-no-submit{
+  pointer-events: none;
+  background: #888888;
+  opacity: 0.5;
+  color: #111111;
+  font-weight: 900;
 }

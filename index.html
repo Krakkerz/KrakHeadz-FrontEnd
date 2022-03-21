@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/style.css">
   <script type="module" src="js/templateRendering.js"></script>
+
+  <script src="js/Utility.js"></script>
 </head>
 
 <body>
@@ -69,32 +71,32 @@
   <h2>Add a user!</h2>
 
   <form>
-    <label for="firstName">First name</label>
+    <label for="firstName">First name <b>*</b></label>
     <input required id="firstName" type="text">
     <hr>
 
-    <label for="lastName">Last name</label>
+    <label for="lastName">Last name <b>*</b></label>
     <input required id="lastName" type="text">
     <hr>
 
-    <label for="address">Address</label>
+    <label for="address">Address <b>*</b></label>
     <input required type="text" id="address">
 
 
     <pre id="addressContent"></pre>
     <hr>
 
-    <label for="selectHobby">Select a hobby</label>
+    <label for="selectHobby">Select a hobby <b>*</b></label>
     <select id="selectHobby">
       <option hidden ></option>
     </select>
     <hr>
 
-    <label for="phoneNumber">Phone number</label>
+    <label for="phoneNumber">Phone number <b>*</b></label>
     <input required id="phoneNumber" type="text">
     <hr>
 
-    <label for="email">Email</label>
+    <label for="email">Email <b>*</b></label>
     <input required id="email" type="email">
     <hr>
 
