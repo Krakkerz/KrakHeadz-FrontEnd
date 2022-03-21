@@ -1,4 +1,4 @@
-import { renderTemplate, setActive, showPage } from "./Utility.js"
+import { renderTemplate, setActive, showPage, required } from "./Utility.js"
 import {fetchPersons, fetchDAWA, getHobbies} from "./Fetch.js";
 import { addUserHandler } from "./addUser.js";
 
@@ -23,11 +23,12 @@ function renderMenuItems(evt) {
       break
     }
     case "addUser" : {
-      getHobbies()
+      required()
+      setInterval(required,0)
       addUserHandler()
+      getHobbies()
       document.getElementById("address").oninput = fetchDAWA
 
-      break
     }
   }
 }

@@ -59,5 +59,18 @@ export function makeOptions(method, body) {
   return options;
 }
 
+export function required() {
+  const submitBtn = document.getElementById("submitUser")
+  const input = document.querySelectorAll("input")
+
+  input.forEach(field => {
+    if (field.value === ""){
+      submitBtn.classList.add("btn-no-submit")
+    } else
+      submitBtn.classList.remove("btn-no-submit")
+  })
+
+}
+
 
 
