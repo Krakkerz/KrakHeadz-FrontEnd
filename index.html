@@ -70,25 +70,32 @@
 
   <form>
     <label for="firstName">First name</label>
-    <input id="firstName" type="text">
+    <input required id="firstName" type="text">
     <hr>
 
     <label for="lastName">Last name</label>
-    <input id="lastName" type="text">
+    <input required id="lastName" type="text">
     <hr>
 
     <label for="address">Address</label>
-    <input type="text" id="address">
+    <input required type="text" id="address">
+
 
     <pre id="addressContent"></pre>
     <hr>
 
+    <label for="selectHobby">Select a hobby</label>
+    <select id="selectHobby">
+      <option hidden ></option>
+    </select>
+    <hr>
+
     <label for="phoneNumber">Phone number</label>
-    <input id="phoneNumber" type="text">
+    <input required id="phoneNumber" type="text">
     <hr>
 
     <label for="email">Email</label>
-    <input id="email" type="email">
+    <input required id="email" type="email">
     <hr>
 
     <button id="submitUser" type="submit">Submit user</button>
