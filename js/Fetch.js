@@ -20,6 +20,32 @@ export function fetchPersons(){
 
 }
 
+export function getAllHobbies() {
+  console.log("Called")
+  fetch(hobbyApi)
+    .then(res => {
+      if (!res.ok) {
+        return Promise.reject("Error " + res.status)
+      }
+      return res.json()
+    })
+    .then(data => {
+      console.log(data)
+      const rows = data.map(u => `
+      <tr>
+         <td>${u.name}</td>
+         <td>${u.description}</td>
+         <td>${u.category}</td>
+         <td>${u.type}</td>
+
+      </tr>
+      `).join("\n")
+      document.getElementById("rows2").innerHTML = rows
+
+    })
+    .catch(e => console.error("Upps: " + e))
+}
+
 export function getHobbies(){
   if (hobbyArray.length > 0 ) {
     return
