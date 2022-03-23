@@ -33,7 +33,7 @@ export function getAllHobbies() {
       console.log(data)
       const rows = data.map(u => `
       <tr>
-         <td><a href=${u.description}>${u.name}</a></td>
+         <td><a href=${u.description} target="blank">${u.name}</a></td>
          <td>${u.category}</td>
          <td>${u.type}</td>
 
