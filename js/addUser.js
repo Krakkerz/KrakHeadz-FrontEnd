@@ -10,14 +10,13 @@ function addUser(){
   const user = {}
   user.firstName = document.getElementById("firstName").value
   user.lastName = document.getElementById("lastName").value
-  // setTimeout(user.lastName,1000)
   user.address = document.getElementById("address").value
   user.phoneNumber = document.getElementById("phoneNumber").value
   user.email = document.getElementById("email").value
 
-  let options = makeOptions("POST",user)
+  let postPerson = makeOptions("POST",user)
 
-  fetch(personsApi,options)
+  fetch(personsApi,postPerson)
     .then(res => res.json())
     .then(newUser => {
       document.getElementById("userInformation").innerText = JSON.stringify(newUser,null,2)

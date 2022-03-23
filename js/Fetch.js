@@ -62,7 +62,6 @@ export function getHobbies(){
 
       }
 
-        document.getElementById("hobbyList").innerText = JSON.stringify(hobbyData,null,2)
       })
 
     .catch(error => console.error(error))
@@ -79,7 +78,11 @@ export function fetchDAWA(){
     .then(res => res.json())
     .then(address => {
 
-        document.getElementById("addressContent").innerText = JSON.stringify(address,null,2)
+      document.getElementById("addressContent")
+        .innerText = JSON.stringify(address[0].tekst,null,2).replace(/"/g, "")
+
+      document.getElementById("addressId")
+        .innerText = JSON.stringify(address[0].data.id,null,2).replace(/"/g, "")
 
 
     })
