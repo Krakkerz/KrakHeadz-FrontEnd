@@ -28,9 +28,9 @@
     <ul id="menu" class="menu">
       <li><a id="about" href="#">About</a></li>
       <li><a id="seeShit" href="#">See address shit!</a></li>
-      <li><a id="myDetails" href="#">My details!!</a></li>
-      <li><a id="addUser" href="#">Add user!</a></li>
-      <li><a id="allHobbies" href="#">All hobbies</a></li>
+      <li><a id="allUsers" href="#">All users!!</a></li>
+      <li><a id="manageUser" href="#">Manager user</a></li>
+      <li><a id="allHobbies" href="#">See all hobbies</a></li>
     </ul>
   </div>
   <div id="content"></div>
@@ -68,7 +68,7 @@
   </div>
 </template>
 
-<template data-id="myDetails">
+<template data-id="allUsers">
   <div>
     <table class="personsTable">
       <thead>
@@ -85,20 +85,20 @@
   </div>
 </template>
 
-<template data-id="addUser">
+<template data-id="manageUser">
   <h2>Add a user!</h2>
 
   <form>
     <label for="firstName">First name <b>*</b></label>
-    <input required id="firstName" type="text">
+    <input value="Malthe" required id="firstName" type="text">
     <hr>
 
     <label for="lastName">Last name <b>*</b></label>
-    <input required id="lastName" type="text">
+    <input value="Gram" required id="lastName" type="text">
     <hr>
 
     <label for="address">Address <b>*</b></label>
-    <input required type="text" id="address">
+    <input value="Nørrebrogade 26,5," required type="text" id="address">
 
 
     <pre id="addressContent"></pre>
@@ -112,14 +112,26 @@
     <hr>
 
     <label for="phoneNumber">Phone number <b>*</b></label>
-    <input required id="phoneNumber" type="text">
+    <input value="23456789" required id="phoneNumber" type="text">
     <hr>
 
     <label for="email">Email <b>*</b></label>
-    <input required id="email" type="email">
+    <input value="malt@gmai.com" required id="email" type="email">
     <hr>
 
     <button id="submitUser" type="submit">Submit user</button>
     <p id="userInformation"></p>
+    <hr>
+  </form>
+  <br>
+  <form>
+    <h2>Delete user</h2>
+    <label for="deleteUserList">Choose user id</label>
+    <select id="deleteUserList">
+      <option hidden></option>
+    </select>
+    <br>
+    <button id="deleteUserBtn">Delete user</button>
+
   </form>
 </template>

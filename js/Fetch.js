@@ -1,6 +1,5 @@
 import { personsApi, dawaApi, hobbyApi } from './Urls.js'
 
-//document.getElementById("btn").onclick = fetchPersons
 
 let personsArray = []
 let hobbyArray = []

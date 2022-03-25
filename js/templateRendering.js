@@ -1,6 +1,6 @@
 import { renderTemplate, setActive, showPage, required } from "./Utility.js"
-import {fetchPersons, fetchDAWA, getHobbies, getAllHobbies} from "./Fetch.js";
-import { addUserHandler } from "./addUser.js";
+import {fetchPersons, fetchDAWA, getHobbies, getAllHobbies, } from "./Fetch.js";
+import {addUserHandler, getIds, deleteUserWithID} from "./manageUser.js";
 
 function renderMenuItems(evt) {
   const element = evt.target
@@ -17,17 +17,19 @@ function renderMenuItems(evt) {
       console.log("See Krakkerz shit here!")
       break
     }
-    case "myDetails" : {
+    case "allUsers" : {
       fetchPersons()
       console.log("myDetails")
       break
     }
-    case "addUser" : {
+    case "manageUser" : {
       required()
       setInterval(required,0)
       addUserHandler()
       getHobbies()
       document.getElementById("address").oninput = fetchDAWA
+      getIds()
+      document.getElementById("deleteUserBtn").onclick = deleteUserWithID
       break
     }
     case "allHobbies" : {
@@ -37,5 +39,5 @@ function renderMenuItems(evt) {
 }
 
 document.getElementById("menu").onclick = renderMenuItems;
-showPage("addUser") //Set the default page to render
+showPage("manageUser") //Set the default page to render
 
